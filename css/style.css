@@ -556,7 +556,7 @@ i.yes {
   flex-direction: column;
   padding: 2rem;
   gap: 1rem;
-  height: 12rem;
+  height: 13rem;
   background-color: var(--blue);
 }
 .login-register-form .text {
