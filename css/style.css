@@ -398,10 +398,14 @@ i.yes {
   }
 }
 
+@media only screen and (max-width: 900px) {
+  .search-area {
+    flex-direction: column;
+  }
+}
+
 /* Medium screen devices (768px and above) OK*/
 @media screen and (max-width: 768px) {
-
-
   /* body {
     background-color: yellow;
   } */
@@ -430,9 +434,6 @@ i.yes {
 
   .second-movie-text {
     flex: 100%;
-  }
-  .search-area {
-    flex-direction: column;
   }
 
   .second-text {
@@ -554,12 +555,8 @@ i.yes {
   right: 0;
   margin: auto;
 
-
-
-
-
   width: 20rem;
-  height:13rem;
+  height: 13rem;
   text-align: center;
   border-radius: 10%;
   display: flex;
