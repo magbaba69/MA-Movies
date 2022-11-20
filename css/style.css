@@ -400,11 +400,8 @@ i.yes {
 
 /* Medium screen devices (768px and above) OK*/
 @media screen and (max-width: 768px) {
-  #login-container {
-    /* background-color: black; */
-    max-width: 80%;
-    /* top:1rem; */
-  }
+
+
   /* body {
     background-color: yellow;
   } */
@@ -494,6 +491,7 @@ i.yes {
   .second-header h2 {
     background-color: lawngreen;
   } */
+
   h2 {
     font-size: 0.7em;
     /* height: 4vh; */
@@ -542,21 +540,33 @@ i.yes {
 
 /*LOGIN, REGISTER*/
 #login-container {
-  position: relative;
-  top: 7rem;
-  margin: 0 auto;
-  width: 25rem;
-  /* max-height:60vh; */
-  /* background-color: red; */
+  background-color: yellow;
+  width: 100%;
+  height: 100%;
+  /* padding:5rem; */
 }
+
 .login-register-form {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+
+
+
+
+  width: 20rem;
+  height:13rem;
   text-align: center;
   border-radius: 10%;
   display: flex;
   flex-direction: column;
   padding: 2rem;
   gap: 1rem;
-  height: 13rem;
+
   background-color: var(--blue);
 }
 .login-register-form .text {
@@ -580,8 +590,6 @@ i.yes {
   background-color: var(--blueDarkLight);
   cursor: pointer;
 }
-.loginError{
-  color:var(--blueDark);
+.loginError {
+  color: var(--blueDark);
 }
-
-

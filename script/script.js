@@ -529,11 +529,11 @@ let registerPage = document.querySelector(".register-form");
 function displayMain(h) {
   if (h == 0) {
     mainContainer.style.display = "none";
-    registerPage.style.display = "none";
+    // registerPage.style.display = "none";
     loginPage.style.display = "flex";
   } else {
     mainContainer.style.display = "block";
-    registerPage.style.display = "none";
+    // registerPage.style.display = "none";
     loginPage.style.display = "none";
     refresh();
   }
