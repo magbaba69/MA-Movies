@@ -101,7 +101,7 @@ function showMovies(response) {
 
     ispis += `
    
-   
+    <h2> ${element.title}</h2>
     <img src="${imageMoviePath}" data-id="${element.id}"  alt="${element.title}" class="theMovieImg">
     
     <div class="movieRate">

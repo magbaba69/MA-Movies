@@ -18,6 +18,7 @@
 
 body {
   background-color: var(--white);
+  /* background-color: var(--blue); */
   color: white;
 }
 
@@ -70,12 +71,22 @@ vertical-align: center;
 .theMovieImg {
   margin: 0 auto;
   width: 100%;
+  height: 75%;
 
   /* height:15rem; */
   /* object-fit: contain; */
 }
 .theMovieImg:hover {
   cursor: pointer;
+}
+.theMovie h2 {
+  padding-top: 5px;
+  font-size: 13px;
+  height: 40px;
+  overflow: hidden;
+
+  width: 100%;
+  margin: 0 auto;
 }
 footer {
   background-color: var(--blueDark);
@@ -92,12 +103,12 @@ footer {
 }
 
 .movieRate {
-  margin-top: 5px;
+  /* margin-top: 5px; */
   font-size: 14px;
   display: flex;
   justify-content: space-around;
   background-color: var(--blueDark);
-  height: 2rem;
+  height: 1rem;
 }
 
 .visible {
@@ -128,7 +139,7 @@ i.yes {
 .movie-navbar {
   background-color: var(--blueDark);
   display: flex;
-  justify-content: space-between;
+  justify-content:space-around;
   align-items: center;
   z-index: 2;
   /* width: 100%; */
@@ -201,14 +212,17 @@ i.yes {
 
 #search,
 #genresOption {
-  height:25px;
-  margin:5px;
+  height: 25px;
+  margin: 5px;
   width: 8rem;
   background-color: var(--white);
-} 
+
+  padding-left: 5px;
+}
 
 .search-area {
-  /* flex: 2; */
+
+ 
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -221,22 +235,19 @@ i.yes {
 
 /*NOVA STRANICA********************************************************************************************/
 .second-header {
-  /* font-size: 20px; */
   text-transform: uppercase;
-  /* padding: 2rem; */
-  /* height: 4rem; */
+  height: 1rem;
   text-align: center;
-  height: fit-content;
-  margin-bottom: 2rem;
-
-  /* color: white; */
+/* 
+  margin-top: 1rem; */
 }
 
 .second-header h2 {
   font-size: 25px;
-  color: black;
+  /* color: black; */
   margin-bottom: 20px;
   color: var(--blueDark);
+  height: fit-content;
 }
 #main-second-container {
   margin: 0 auto;
@@ -245,7 +256,7 @@ i.yes {
 
 .second-container {
   color: black;
-  border: 2px solid var(--blue);
+  /* border: 2px solid var(--blue); */
   margin: 0 auto;
   /* width: 80%; */
   text-align: center;
@@ -521,6 +532,9 @@ i.yes {
   .theMovie {
     width: 120px;
   }
+  .theMovieImg {
+    height: 70%;
+  }
 }
 /*ABOUR ACTOR*/
 .aboutActor {
@@ -593,4 +607,3 @@ i.yes {
 .loginError {
   color: var(--blueDark);
 }
-
