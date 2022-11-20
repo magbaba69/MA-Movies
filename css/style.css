@@ -1,0 +1,591 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Joan&family=Lobster&family=Macondo&family=Pacifico&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,900&family=Source+Code+Pro:wght@600&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+:root {
+  --blueDark: #06283d;
+  --blueDarkLight: #256985;
+  --blueLight: #47b5ff;
+  --blue: #bbb2eb;
+  --white: #deecf1;
+}
+
+body {
+  background-color: var(--white);
+  color: white;
+}
+
+h1 {
+  margin-top: 15px;
+  text-align: center;
+  color: var(--blueDark);
+}
+h2 {
+  font-size: 18px;
+  text-align: center;
+  height: 4vh;
+  margin: 10px 10px;
+}
+
+#main-container {
+  margin: 0 auto;
+
+  width: 90%;
+}
+.movies-container {
+  width: 100%;
+}
+
+.movies {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.theMovie {
+  background-color: var(--blueDark);
+  width: 150px;
+
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  margin: 20px 15px;
+}
+
+.theMovie:hover {
+  box-shadow: 0 0 1px 10px var(--blueDarkLight);
+}
+/* .theMovie h2{
+  padding:0;
+  
+vertical-align: center;
+  font-size:70%;
+} */
+
+.theMovieImg {
+  margin: 0 auto;
+  width: 100%;
+
+  /* height:15rem; */
+  /* object-fit: contain; */
+}
+.theMovieImg:hover {
+  cursor: pointer;
+}
+footer {
+  background-color: var(--blueDark);
+  font-size: 40px;
+  color: white;
+  text-align: center;
+}
+
+#next {
+  cursor: pointer;
+}
+#previous {
+  cursor: pointer;
+}
+
+.movieRate {
+  margin-top: 5px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--blueDark);
+  height: 2rem;
+}
+
+.visible {
+  visibility: visible;
+}
+.hidden {
+  visibility: hidden;
+}
+/* i {
+  color: yellow;
+} */
+
+i.favourite {
+  padding: 0.2rem;
+  cursor: pointer;
+  font-size: 2rem;
+  color: var(--blueDarkLight);
+}
+i.yes {
+  color: red;
+}
+
+/* HEADER */
+
+/* NAV BAR------------------------------------------------------------------------------------------------- */
+/* navbar regular css start */
+
+.movie-navbar {
+  background-color: var(--blueDark);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  /* width: 100%; */
+}
+
+.movieLogo {
+  padding: 0.5rem;
+  font-size: 15px;
+  font-size: 20px;
+  font-weight: 800;
+  /* text-transform: uppercase; */
+  color: var(--white);
+  text-decoration: none;
+}
+.movie-navbar ul {
+  /* background-color: yellow; */
+
+  display: flex;
+}
+.movie-navbar ul li a {
+  color: #fff;
+  padding: 20px;
+  display: block;
+
+  /* text-transform: uppercase; */
+}
+.movie-navbar ul li a:hover {
+  /* background: rgba(255, 255, 255, 0.1); */
+  background-color: var(--blueDarkLight);
+}
+/* navbar regular css end */
+
+/* nav-toggler css start */
+.nav-toggler {
+  border: 3px solid var(--blueLight);
+
+  padding: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  height: 39px;
+  display: none;
+}
+.nav-toggler span,
+.nav-toggler span:before,
+.nav-toggler span:after {
+  width: 28px;
+  height: 3px;
+  background-color: #fff;
+  display: block;
+  transition: 0.3s;
+}
+.nav-toggler span:before {
+  content: "";
+  transform: translateY(-9px);
+}
+.nav-toggler span:after {
+  content: "";
+  transform: translateY(6px);
+}
+.nav-toggler.toggler-open span {
+  background-color: transparent;
+}
+.nav-toggler.toggler-open span:before {
+  transform: translateY(0px) rotate(45deg);
+}
+.nav-toggler.toggler-open span:after {
+  transform: translateY(-3px) rotate(-45deg);
+}
+/* nav-toggler css start */
+
+#search,
+#genresOption {
+  width: 9rem;
+}
+
+.search-area {
+  flex: 2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* mobile breakpoint end */
+
+/* BREAK POINTS */
+/*For extremely small screen devices (595px and below)*/
+
+/*NOVA STRANICA********************************************************************************************/
+.second-header {
+
+  /* font-size: 20px; */
+  text-transform: uppercase;
+  /* padding: 2rem; */
+  /* height: 4rem; */
+  text-align: center;
+  height: fit-content;
+  margin-bottom: 2rem;
+
+  /* color: white; */
+}
+
+.second-header h2 {
+  font-size: 25px;
+  color: black;
+  margin-bottom: 20px;
+  color: var(--blueDark);
+}
+#main-second-container {
+  margin: 0 auto;
+  background-color: var(--white);
+}
+
+.second-container {
+  color: black;
+  border: 2px solid var(--blue);
+  margin: 0 auto;
+  /* width: 80%; */
+  text-align: center;
+  padding: 20px;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+.second-container > p {
+  font-size: 25pt;
+}
+
+.second-image-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* flex-direction: row; */
+  gap: 2rem;
+  padding: 20px;
+}
+.second-movie-image-container {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--blue);
+  flex: 20%;
+  margin: 0 auto;
+  /* width: 15rem; */
+}
+.second-movie-image {
+  width: 80%;
+}
+.second-movie-image-container p {
+  padding: 15px;
+}
+.genres {
+  font-weight: bold;
+  color: var(--blueDark);
+}
+
+.genreHeader {
+  text-transform: uppercase;
+}
+
+.second-movie-text {
+  margin: 0 auto;
+  background-color: var(--blue);
+  flex: 30%;
+  padding: 20px;
+  border-radius: 10px;
+}
+.second-movie-text h2 {
+  height: fit-content;
+  font-size: 18px;
+}
+
+.second-actors-container {
+  background-color: var(--blue);
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  border-radius: 10px;
+  flex: 35%;
+  /* background-color: darkgoldenrod; */
+  cursor: pointer;
+}
+.second-actors-container h2 {
+  flex: 100%;
+  padding: 0.5rem;
+}
+
+.actor-image {
+  border-radius: 10px;
+  width: 6rem;
+
+  margin: 1rem;
+  /* object-fit: contain; */
+}
+
+.actor-name {
+  margin: 0 auto;
+  font-size: 14px;
+  width: 5rem;
+  padding: 0.5rem;
+}
+.second-footer {
+  justify-content: space-between;
+  width: 100%;
+  text-align: center;
+  background-color: #333;
+  padding: 0.7rem;
+  height: 3rem;
+  color: white;
+}
+
+.btn {
+  position: fixed;
+  bottom: 20px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: var(--blueDark);
+  /* background-color: rgb(86 86 86 / 36%); */
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 1rem;
+}
+/*ovo mora da se smanji kada se promeni rezolucija*/
+#btnTop {
+  right: 10px;
+}
+#btnBack {
+  left: 10px;
+}
+
+.btn:hover {
+  background-color: var(--blueDark);
+}
+
+/*BREAK POINTS*/
+
+/* Extra big screen devices (1200px and above) OK*/
+@media only screen and (max-width: 1200px) {
+  /* body {
+    background-color: deeppink;
+  }
+  .second-header h2 {
+    background-color: deeppink;
+  } */
+  h2 {
+    font-size: 0.7em;
+    height: 5vh;
+  }
+  .second-movie-image-container {
+    flex: 5%;
+  }
+
+  .second-actors-container {
+    flex: 100%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  /* body {
+    background-color: coral;
+  }
+  .second-header h2 {
+    background-color: coral;
+  } */
+  .actor-image {
+    width: 6rem;
+    margin: 0.3rem;
+  }
+}
+
+/* Medium screen devices (768px and above) OK*/
+@media screen and (max-width: 768px) {
+#login-container{
+  /* background-color: black; */
+  max-width: 80%;
+  /* top:1rem; */
+}
+  /* body {
+    background-color: yellow;
+  } */
+  #main-container {
+  
+    width: 100%;
+  }
+
+  .second-header {
+    width: 100%;
+  }
+
+  .second-container {
+ 
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: none;
+    width: 100%;
+  }
+
+  .second-image-container {
+    padding: 0;
+ 
+  }
+
+  .second-movie-image {
+    width: 50%;
+  }
+
+  .second-movie-text {
+    flex: 100%;
+  }
+  .search-area {
+    flex-direction: column;
+  }
+
+  .second-text {
+    flex-basis: 60%;
+    width: 100%;
+  }
+
+  /* navbar css for mobile start */
+  .nav-toggler {
+    display: block;
+  }
+  .movie-navbar {
+    min-height: 60px;
+  }
+  .movie-navbar ul {
+    margin: 0 auto;
+    margin-top: 5px;
+    position: absolute;
+    min-width: 100%;
+    height: calc(100vh - 60px);
+
+    left: 0;
+    top: 60px;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    /*ovde*/
+    /* background-color: rgba(0, 0, 0, 0.75); */
+    background-color: var(--blueDark);
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s;
+  }
+  .movie-navbar ul li {
+    width: 100%;
+    text-align: center;
+  }
+  .movie-navbar ul li a {
+    padding: 15px;
+  }
+  .movie-navbar ul li a:hover {
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    background-color: var(--blueDarkLight);
+  }
+  .movie-navbar ul.open {
+    max-height: 100vh;
+    overflow: visible;
+  }
+
+  /* navbar css for mobile end */
+}
+@media only screen and (max-width: 425px) {
+  /* body {
+    background-color: lawngreen;
+  }
+  .second-header h2 {
+    background-color: lawngreen;
+  } */
+  h2 {
+    font-size: 0.7em;
+    /* height: 4vh; */
+  }
+  .movieRate {
+    padding: 5px;
+    height: 7vh;
+    font-size: 12px;
+  }
+  .second-movie-image {
+    width: 80%;
+  }
+}
+
+/* Small screen devices (600px and above) OK*/
+@media only screen and (max-width: 320px) {
+  /* body {
+    background-color: blue;
+  }
+  .second-header h2 {
+    background-color: blue;
+  } */
+  .theMovie {
+    width: 120px;
+  }
+}
+
+.aboutActor {
+  background-color: var(--blue);
+  margin-top: 10px;
+  text-align: left;
+  border-radius: 10px;
+}
+.aboutActor > p {
+  /* background-color: #256985; */
+  padding: 10px;
+}
+.aboutActor p span {
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+.nameOfActor {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#login-container {
+
+  position: relative;
+  top: 7rem;
+  margin: 0 auto;
+  width: 25rem;
+  /* max-height:60vh; */
+  /* background-color: red; */
+}
+.login-register-form {
+  border-radius:10%;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  gap: 2rem;
+height:25rem;
+background-color: var(--blue);
+}
+.login-register-form .text{
+  padding:5px;
+  border:none;
+  outline: none;
+  margin: 0 auto;
+height:2rem;
+  width: 100%;
+}
+
+
+
+.login-register-form .btnLoginRegister {
+  color:var(--white);
+  margin:0 auto;
+  border:none;
+  outline:none;
+  border-radius:5%;
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+  margin: 0 auto;
+  width:4rem;
+background-color: var(--blueDarkLight);
+cursor:pointer;
+}
+
+/* .spanRegister{
+
+} */

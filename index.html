@@ -1,0 +1,154 @@
+<!--w W-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MA Movies</title>
+
+    <link rel="icon" type="image/png" href="img/film-solid.svg" />
+    <script
+      src="https://kit.fontawesome.com/be855246e0.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="login-container">
+      <form action="" class="login-form login-register-form">
+        <input
+          type="text"
+          id="mail-text"
+          class="mail text"
+          placeholder="unesite mail"
+          value=""
+        />
+        <input
+          type="password"
+          id="pass-text"
+          class="pass text passText"
+          placeholder="unesite sifru"
+          value=""
+        />
+        <input
+          type="button"
+          class="btnLogin btnLoginRegister"
+          id="btn-login"
+          value="Sing in"
+        />
+    
+        <p class="loginError"></p>
+        <p class="register-text">
+          If you don't have account you can register here
+          <span class="spanRegister"> Register </span>
+        </p>
+      
+      </form>
+
+      <form action="" class="register-form login-register-form">
+        <input type="text" class="mail text" placeholder="unesite mail" />
+        <input type="password" class="pass text" placeholder="unesite sifru" />
+        <input
+          type="button"
+          class="btnRegister btnLoginRegister"
+          value="Sing up"
+        />
+        <!-- <p class="register-text"></p>Register</p> -->
+      </form>
+    </div>
+    <!--FIRST PAGE-->
+    <div id="main-container">
+      <i
+        title="Go to top"
+        id="btnTop"
+        class="fa fa-arrow-up btn"
+        style="display: block"
+      ></i>
+      <i
+        id="btnBack"
+        title="Go back"
+        class="fa fa-arrow-left btn"
+        style="display: block"
+      ></i>
+      <!--HEADER-->
+      <header class="header-area">
+        <!--NAVBAR-->
+        <nav class="movie-navbar">
+          <p class="movieLogo">MOVIES<span class="about"> MA</span></p>
+          <ul class="ul-area">
+            <li>
+              <a href="#" class="home">Home</a>
+            </li>
+            <li class="topRated"><a href="#">Top rated</a></li>
+            <li class="latest"><a href="#">Upcoming</a></li>
+            <li class="logout"><a href="#">Logout</a></li>
+           
+          </ul>
+          <div class="search-area">
+            <div class="genres-area">
+              <label for="genresOption"></label>
+              <select name="genres" id="genresOption">
+                <option selected hidden>Choose genre</option>
+                <option value="all">All</option>
+                <!-- <option value="rigatoni">Rigatoni</option>
+              
+                <option value="pumpernickel">Pumpernickel</option>
+                <option value="reeses">Reeses</option> -->
+              </select>
+            </div>
+            <div class="searchMovie-area">
+              <form id="searchMovie" name="searchMovie">
+                <input
+                  type="text"
+                  name="search"
+                  id="search"
+                  placeholder="Search any movie"
+                />
+              </form>
+            </div>
+          </div>
+          <div class="toggle-area">
+            <!-- nav-toggler for mobile version only -->
+            <button class="nav-toggler">
+              <span></span>
+            </button>
+          </div>
+        </nav>
+        <!-- navbar-area end -->
+      </header>
+      <div class="movies-container">
+        <h1 class="genreHeader">Naslov</h1>
+        <div class="movies mozdanista"></div>
+
+        <footer class="pagging">
+          <span id="page">1</span>
+          <span id="next"> <i class="fa fa-angle-double-right"></i> </span>
+        </footer>
+      </div>
+      <!--SECOND PAGE-->
+      <div id="main-second-container">
+        <div class="second-header"></div>
+
+        <div class="second-container">
+          <div class="second-image-container">
+            <div class="second-movie-image-container"></div>
+
+            <div class="second-movie-text"></div>
+
+            <div class="second-actors-container">
+              <!-- <h2>ACTORS</h2> -->
+            </div>
+          </div>
+
+          <div class="aboutActor"></div>
+
+          <!-- <div class="second-footer"> -->
+          <h2>Footer</h2>
+        </div>
+      </div>
+    </div>
+
+    <script src="script/script.js"></script>
+  </body>
+</html>
