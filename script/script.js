@@ -58,7 +58,6 @@ async function getMovies(url, page, genreText) {
   const respData = await response.json();
 
   showMovies(respData);
- 
 }
 
 //SHOW ALL MOVIES
@@ -66,8 +65,8 @@ async function getMovies(url, page, genreText) {
 let totalPages;
 
 function showMovies(response) {
-  console.log("bbbbbbbbbbbbbb")
-  console.log(response)
+  console.log("bbbbbbbbbbbbbb");
+  console.log(response);
   moviesContainer.style.display = "block";
   secondsontainerV.style.display = "none";
   btn.style.display = "none";
@@ -565,7 +564,8 @@ function controllLogin() {
 
     displayMain((h = 1));
   } else {
-    document.querySelector(".loginError").textContent = "Name or pass is not correct, try again.";
+    document.querySelector(".loginError").textContent =
+      "Name or pass is not correct, try again.";
   }
 }
 
@@ -580,6 +580,8 @@ function checkLoginLC() {
 checkLoginLC();
 
 document.querySelector(".logout").addEventListener("click", () => {
+  document.querySelector(".loginError").textContent = "";
+
   localStorage.removeItem("MAMoviesLogin");
 
   displayMain((h = 0));
@@ -635,7 +637,7 @@ function upcomingMovies() {
   genresV.selectedIndex = 0;
   search.value = "";
   let ggg = "Upcoming";
-url=`https://api.themoviedb.org/3/movie/upcoming?${apiKey}&language=en-US`  
-  
+  url = `https://api.themoviedb.org/3/movie/upcoming?${apiKey}&language=en-US`;
+
   getMovies(url, 1, ggg);
 }
