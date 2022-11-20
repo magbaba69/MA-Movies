@@ -524,7 +524,7 @@ i.yes {
     width: 120px;
   }
 }
-
+/*ABOUR ACTOR*/
 .aboutActor {
   background-color: var(--blue);
   margin-top: 10px;
@@ -543,6 +543,9 @@ i.yes {
   font-weight: bold;
   text-transform: uppercase;
 }
+
+
+/*LOGIN, REGISTER*/
 #login-container {
 
   position: relative;
@@ -558,7 +561,7 @@ i.yes {
   flex-direction: column;
   padding: 3rem;
   gap: 2rem;
-height:25rem;
+height:17rem;
 background-color: var(--blue);
 }
 .login-register-form .text{
