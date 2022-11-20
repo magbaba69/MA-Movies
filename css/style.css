@@ -201,8 +201,10 @@ i.yes {
 
 #search,
 #genresOption {
+  margin:5px;
   width: 9rem;
-}
+  background-color: var(--white);
+} 
 
 .search-area {
   flex: 2;

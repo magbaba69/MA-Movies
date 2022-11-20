@@ -565,7 +565,7 @@ function controllLogin() {
     displayMain((h = 1));
   } else {
     document.querySelector(".loginError").textContent =
-      "Name or pass is not correct, try again.";
+      "Name or password is not correct, try again.";
   }
 }
 
