@@ -201,13 +201,14 @@ i.yes {
 
 #search,
 #genresOption {
+  height:25px;
   margin:5px;
-  width: 9rem;
+  width: 8rem;
   background-color: var(--white);
 } 
 
 .search-area {
-  flex: 2;
+  /* flex: 2; */
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -592,3 +593,4 @@ i.yes {
 .loginError {
   color: var(--blueDark);
 }
+
