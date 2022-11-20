@@ -625,7 +625,7 @@ document.querySelector(".topRated").addEventListener("click", topRatedMovies);
 function topRatedMovies() {
   genresV.selectedIndex = 0;
   search.value = "";
-  let ggg = "Top radete movies";
+  let ggg = "Top rated movies";
 
   url = `https://api.themoviedb.org/3/movie/top_rated?${apiKey}&language=en-US`;
   getMovies(url, 1, ggg);
