@@ -71,8 +71,6 @@ function upcomingMovies() {
 //SHOW ALL MOVIES
 let totalPages;
 function showMovies(response) {
-  console.log("bbbbbbbbbbbbbb");
-  console.log(response);
   moviesContainer.style.display = "block";
   secondsontainerV.style.display = "none";
   btn.style.display = "none";
@@ -103,8 +101,6 @@ function showMovies(response) {
     div.innerHTML = printing;
     moviesV.appendChild(div);
 
-    //svi favoriti
-    //ovde
   });
 
   const images = document.querySelectorAll(".theMovieImg");
@@ -124,7 +120,6 @@ function getTheMovieData(e) {
 function getActorData(e) {
   let id = e.target.dataset.acid;
   getTheActor(id);
-  // console.log(id);
 }
 
 // FIND ONE MOVIE AND ACTORS BY ID
@@ -162,7 +157,7 @@ async function getTheActor(id) {
 async function showsecondData(data, actor) {
   scroll(0, 0);
   let numberOfActors = actor.cast.length;
-  console.log(numberOfActors);
+
   document.querySelector(".movies-container").style.display = "none";
   secondsontainerV.style.display = "block";
   btn.style.display = "block";
@@ -211,11 +206,9 @@ async function showsecondData(data, actor) {
     actorID[i] = actor.cast[i].id;
     if (actor.cast[i].profile_path != null) {
       actorImage[i] = imgPathMoviesURL + actor.cast[i].profile_path;
-      console.log(actorImage);
     } else {
       actorImage[i] = noImage;
     }
-    console.log(actorImage[0]);
   }
   let actorsImages = "";
 
@@ -234,7 +227,7 @@ async function showsecondData(data, actor) {
   ).innerHTML += `<h2>ACTORS</h2>
   ${actorsImages}`;
   let acImage = document.querySelectorAll(".actor-image");
-  console.log(acImage);
+
   acImage.forEach((element) => {
     element.addEventListener("click", getActorData);
   });
@@ -363,7 +356,6 @@ function navLinkClick() {
 }
 //GET GENRES AND FILL OPTION
 async function getGenres(genresURL) {
-  console.log(genresURL);
   const response = await fetch(genresURL);
   const genresRes = await response.json();
   fillOptionGenres(genresRes);
@@ -382,7 +374,7 @@ function getGenreMovies() {
   search.value = "";
   let page = 1;
   let k = genresV.value;
-  console.log("aaaaaabababa" + k);
+
   genresText = genresV.options[genresV.selectedIndex].text;
   url = `${baseMoviesURL}${discoverPartURL}${apiKey}&with_genres=${k}${language}`;
   document.getElementById("page").textContent = 1;
@@ -408,16 +400,12 @@ function showActorData(response) {
   let noData = "There is no data about this.";
   data = response;
   document.querySelector(".aboutActor").style.display = "block";
-  console.log("ovo su podaci");
-  console.log(data);
+
   let biog = response.biography.split(".");
-  biog.forEach((element) => {
-    console.log("ok");
-  });
+  biog.forEach((element) => {});
   let biographyText = response.biography;
   if (biographyText == "" || biographyText == []) {
     biographyText = noData;
-    console.log("nema biografiju");
   }
   formatDate(response.birthday);
   let birthdayText = date;
@@ -476,24 +464,23 @@ displayMain((h = 0));
 controllLogin();
 document.querySelector(".loginError").textContent = "";
 let btnLogin = document.getElementById("btn-login");
-console.log(btnLogin);
+
 btnLogin.addEventListener("click", controllLogin);
 
 function controllLogin() {
   let printing = "";
 
   let mailText = document.getElementById("mail-text");
-  console.log(mailText.value);
+
   let passText = document.getElementById("pass-text");
-  console.log(passText.value);
+
   printing = [mailText.value, passText.value];
-  console.log(printing);
+
   if (printing[0] == "proba" && printing[1] == "proba") {
     let login = ["proba", "proba"];
     localStorage.setItem("MAMoviesLogin", JSON.stringify(login));
     mailText.value = "";
     passText.value = "";
-    console.log("mail text contnt:" + mailText.textContent);
 
     displayMain((h = 1));
   } else {
@@ -526,7 +513,7 @@ function refresh() {
   getMovies(url, 1, genText);
   // genresV.firstChild.value = "All";
   genresV.selectedIndex = 0;
-  console.log((genresV.selectedIndex = 0));
+
   search.value = "";
   document.querySelector(".genreHeader").innerHTML = "All";
   document.querySelector(".aboutActor").style.display = "none";
