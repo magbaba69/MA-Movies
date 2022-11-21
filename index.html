@@ -2,17 +2,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Use TMDB API for final project">
+    <meta name="keywords" content="movies, magbaba" >
     <title>MA Movies</title>
-
-    <link rel="icon" type="image/png" href="img/film-solid.svg" />
+    <link rel="icon" type="image/png" href="img/film-solid.svg">
     <script
       src="https://kit.fontawesome.com/be855246e0.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <div id="login-container">
@@ -23,20 +24,20 @@
           class="mail text"
           placeholder="unesite mail"
           value=""
-        />
+        >
         <input
           type="password"
           id="pass-text"
           class="pass text passText"
           placeholder="unesite sifru"
           value=""
-        />
+        >
         <input
           type="button"
           class="btnLogin btnLoginRegister"
           id="btn-login"
           value="Sing in"
-        />
+        >
 
         <p class="loginError"></p>
         <p class="register-text">
@@ -46,14 +47,14 @@
       </form>
 
       <!-- <form action="" class="register-form login-register-form">
-        <input type="text" class="mail text" placeholder="unesite mail" />
-        <input type="password" class="pass text" placeholder="unesite sifru" />
+        <input type="text" class="mail text" placeholder="unesite mail" >
+        <input type="password" class="pass text" placeholder="unesite sifru" >
         <input
           type="button"
           class="btnRegister btnLoginRegister"
           value="Sing up"
-        />
-        <p class="register-text"></p>Register</p>
+        >
+        <p class="register-text"></p>Register<p>
       </form> -->
     </div>
     <!--FIRST PAGE-->
@@ -89,10 +90,6 @@
               <select name="genres" id="genresOption">
                 <option selected hidden>Choose genre</option>
                 <option value="all">All</option>
-                <!-- <option value="rigatoni">Rigatoni</option>
-              
-                <option value="pumpernickel">Pumpernickel</option>
-                <option value="reeses">Reeses</option> -->
               </select>
             </div>
             <div class="searchMovie-area">
@@ -102,18 +99,17 @@
                   name="search"
                   id="search"
                   placeholder="Search any movie"
-                />
+                >
               </form>
             </div>
           </div>
           <div class="toggle-area">
-            <!-- nav-toggler for mobile version only -->
             <button class="nav-toggler">
               <span></span>
             </button>
           </div>
         </nav>
-        <!-- navbar-area end -->
+        
       </header>
       <div class="movies-container">
         <h1 class="genreHeader">Naslov</h1>
@@ -127,20 +123,13 @@
       <!--SECOND PAGE-->
       <div id="main-second-container">
         <div class="second-header"></div>
-
         <div class="second-container">
           <div class="second-image-container">
             <div class="second-movie-image-container"></div>
-
             <div class="second-movie-text"></div>
-
-            <div class="second-actors-container">
-          
-            </div>
+            <div class="second-actors-container"></div>
           </div>
-
           <div class="aboutActor"></div>
-
           <!-- <div class="second-footer"> -->
           <!-- <h2>Footer</h2> -->
         </div>
