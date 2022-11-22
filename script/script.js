@@ -41,7 +41,7 @@ if (myFavourites === null) {
 async function getMovies(url, page, genreText) {
   document.querySelector(".genreHeader").innerHTML = genreText;
   genText = genreText;
-  let nesto = url + "&page=" + page;
+
   const response = await fetch(url + "&page=" + page);
   const respData = await response.json();
   showMovies(respData);
@@ -100,7 +100,6 @@ function showMovies(response) {
      `;
     div.innerHTML = printing;
     moviesV.appendChild(div);
-
   });
 
   const images = document.querySelectorAll(".theMovieImg");
@@ -507,11 +506,11 @@ document.querySelector(".logout").addEventListener("click", () => {
 
 //REFRESH PAGE AND DISPLAY DEFAULT
 function refresh() {
-  gentText = "All";
+  // gentText = "All";
   url = `${baseMoviesURL}${discoverPartURL}${apiKey}${language}`;
-  // getGenres(url);
+
   getMovies(url, 1, genText);
-  // genresV.firstChild.value = "All";
+
   genresV.selectedIndex = 0;
 
   search.value = "";
