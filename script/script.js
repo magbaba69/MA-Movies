@@ -62,10 +62,10 @@ document.querySelector(".latest").addEventListener("click", upcomingMovies);
 function upcomingMovies() {
   genresV.selectedIndex = 0;
   search.value = "";
-  let ggg = "Upcoming";
+  let genreT = "Upcoming";
   url = `https://api.themoviedb.org/3/movie/upcoming?${apiKey}&language=en-US`;
 
-  getMovies(url, 1, ggg);
+  getMovies(url, 1, genreT);
 }
 
 //SHOW ALL MOVIES
@@ -156,7 +156,14 @@ async function getTheActor(id) {
 async function showsecondData(data, actor) {
   scroll(0, 0);
   let numberOfActors = actor.cast.length;
-
+  let backdrop = "img/noImage.png";
+  let poster = "img/noImage.png";
+  if (data.backdrop_path != null) {
+    backdrop = imgPathMoviesURL + data.backdrop_path;
+  }
+  if (data.poster_path != null) {
+    poster = imgPathMoviesURL + data.poster_path;
+  }
   document.querySelector(".movies-container").style.display = "none";
   secondsontainerV.style.display = "block";
   btn.style.display = "block";
@@ -169,9 +176,7 @@ async function showsecondData(data, actor) {
   document.querySelector(".second-header").innerHTML = ` <h2>${data.title}</h2>
 `;
   document.querySelector(".second-movie-image-container").innerHTML = `
-      <img class="second-movie-image" src="${
-        imgPathMoviesURL + data.poster_path
-      }" alt="poster of movie"/>
+      <img class="second-movie-image" src="${poster}" alt="poster of movie"/>
       <p>Genres: 
       <span class="genres">${theMovieGenres}</span>
       </p>
@@ -184,9 +189,7 @@ async function showsecondData(data, actor) {
       ${data.overview}</p>
       <br>
       <h2> ${data.tagline}</h2>
-      <img class="second-movie-image" src="${
-        imgPathMoviesURL + data.backdrop_path
-      }" alt="poster of movie"/>
+      <img class="second-movie-image" src="${backdrop}" alt="poster of movie"/>
       </div>
 `;
   //CHCK NUMBER OF ACTORS IN RESPONSE AND CHECK IF ACTOR HAS AN IMAGE
