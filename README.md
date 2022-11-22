@@ -11,5 +11,8 @@ Klikom na glumca mogu se videti kratke informacije o izabranom glumcu.
 
 Link do sajta: https://movies-ma.netlify.app
 
+sifra:proba
+pasword:proba
+
 
 
